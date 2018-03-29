@@ -1,0 +1,36 @@
+buildscript {
+    dependencies {
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.8.2'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+    }
+}
+apply plugin: 'java'
+apply plugin: 'javafx-gradle-plugin'
+apply plugin: 'application'
+
+mainClassName = 'hrsystem.Main'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'hrsystem.Main'
+    }
+}
+
+jfx {
+    // minimal requirement for jfxJar-task
+    mainClass = 'hrsystem.Main'
+    
+    // minimal requirement for jfxNative-task
+    vendor = 'pleycpl'
+}
+
