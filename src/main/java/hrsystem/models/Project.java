@@ -1,4 +1,4 @@
-package application.model;
+package hrsystem.models;
 
 public class Project {
     private int id;

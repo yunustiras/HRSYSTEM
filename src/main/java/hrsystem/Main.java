@@ -1,4 +1,4 @@
-package application;
+package hrsystem;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +23,7 @@ public class Main extends Application {
 		try {
 			//load home layout
 	        FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/HomePage.fxml"));
+            loader.setLocation(Main.class.getResource("/hrsystem/view/HomePage.fxml"));
             rootLayout = (AnchorPane) loader.load();
             
 			Scene scene = new Scene(rootLayout);
