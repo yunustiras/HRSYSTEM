@@ -12,9 +12,18 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane
+        xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="hrsystem.modules.main.controller.MainView">
    <children>
-      <BorderPane prefHeight="470.0" prefWidth="730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane
+              prefHeight="470.0"
+              prefWidth="730.0"
+              AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
          <center>
             <Pane prefHeight="441.0" prefWidth="730.0" BorderPane.alignment="CENTER">
                <children>
@@ -28,8 +37,20 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                   </TableView>
-                  <Button layoutX="514.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="202.0" text="Search Project" />
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="485.0" />
+                  <Button
+                          layoutX="514.0"
+                          layoutY="14.0"
+                          mnemonicParsing="false"
+                          prefHeight="26.0"
+                          prefWidth="202.0"
+                          text="Search Project"
+                          onAction="#search"/>
+                  <TextField
+                          layoutX="14.0"
+                          layoutY="14.0"
+                          prefHeight="26.0"
+                          prefWidth="485.0"
+                          fx:id="search_text"/>
                </children>
             </Pane>
          </center>
