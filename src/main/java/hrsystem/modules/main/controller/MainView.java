@@ -1,5 +1,6 @@
 package hrsystem.modules.main.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
@@ -20,5 +21,10 @@ public class MainView implements Initializable {
     @FXML
     public void search() {
         System.out.println(search_text.getText());
+    }
+
+    @FXML
+    public void handleSearchButtonAction(ActionEvent event){
+        System.out.println(String.format("Will Search Project at %s",search_text.getText()));
     }
 }
