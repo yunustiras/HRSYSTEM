@@ -14,17 +14,17 @@ import java.util.ResourceBundle;
 
 public class LoginView implements Initializable {
     @FXML
-    private TextField textEmail;
+    private TextField textUser;
 
     @FXML
     private PasswordField textPassword;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        String email = textEmail.getText();
+        String user = textUser.getText();
         String password = textPassword.getText();
-        System.out.println(String.format("Email: %s, Password: %s", email, password));
-        if(email.equals("admin") && password.equals("1234")) {
+        System.out.println(String.format("User: %s, Password: %s", user, password));
+        if(user.equals("admin") && password.equals("1234")) {
             Stage loginViewStage = (Stage) (((Node) event.getSource()).getScene().getWindow());
             Main.changeCurrentStage(loginViewStage, "/hrsystem/main/fxml/main.fxml");
         }
