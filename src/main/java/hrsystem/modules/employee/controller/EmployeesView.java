@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EmployeesView implements Initializable {
-    private static String MainFxmlScenePath = "/hrsystem/main/fxml/main.fxml";
+    private static String PreviousSceneFxmlPath = "/hrsystem/main/fxml/main.fxml";
 
     @FXML
     private Button returnMain;
@@ -28,22 +28,23 @@ public class EmployeesView implements Initializable {
     public void handleButtonAction(ActionEvent event){
         Stage stage = (Stage) returnMain.getScene().getWindow();
         if (event.getSource() == returnMain) {
-            System.out.println("addProjectButton clicked.");
+            System.out.println("returnMain clicked.");
             try {
-                StageController.switchStage(stage, MainFxmlScenePath);
+                StageController.switchStage(stage, PreviousSceneFxmlPath);
             } catch (IOException e) {
                 System.out.println("Fxml doesn't exists or " + e.toString());
             } catch (Exception e) {
                 System.out.println("Wtf " + e.toString());
             }
         } else if (event.getSource() == searchButton) {
-            System.out.println(String.format("Will Search Project at %s",searchText.getText()));
+            System.out.println(String.format("Will Search Employee at %s",searchText.getText()));
         } else {
             System.out.println("What?");
         }
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("View is now loaded!");
+        System.out.println("EmployeesView is now loaded!");
     }
 }

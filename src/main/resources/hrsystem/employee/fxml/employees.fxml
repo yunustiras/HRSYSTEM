@@ -19,7 +19,7 @@
                     <children>
                         <TableView layoutY="64.0" prefHeight="376.0" prefWidth="730.0" tableMenuButtonVisible="true">
                             <columns>
-                                <TableColumn minWidth="2.0" prefWidth="358.0" text="Project" />
+                                <TableColumn minWidth="2.0" prefWidth="358.0" text="Employee" />
                                 <TableColumn minWidth="0.0" prefWidth="383.0" text="Status" />
                                 <TableColumn prefWidth="104.0" text="Actions" />
                             </columns>
@@ -28,7 +28,7 @@
                             </columnResizePolicy>
                         </TableView>
                         <Button fx:id="returnMain" onAction="#handleButtonAction" layoutX="621.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Return Main" />
-                        <Button fx:id="searchButton" onAction="#handleButtonAction" layoutX="478.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Search Project" />
+                        <Button fx:id="searchButton" onAction="#handleButtonAction" layoutX="478.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Search Employee" />
                         <TextField fx:id="searchText" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="455.0" />
                     </children>
                 </Pane>

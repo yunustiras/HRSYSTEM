@@ -17,6 +17,7 @@ public class MainView implements Initializable {
     public static String AddEmployeeFxmlScenePath = "/hrsystem/employee/fxml/addEmployee.fxml";
     public static String ListEmployeeFxmlScenePath = "/hrsystem/employee/fxml/employees.fxml";
 
+    Stage stage;
     @FXML
     private Button addProjectButton;
 
@@ -31,7 +32,7 @@ public class MainView implements Initializable {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        Stage stage = (Stage) addProjectButton.getScene().getWindow();
+        stage = (Stage) addProjectButton.getScene().getWindow();
         try {
             if (event.getSource() == addProjectButton) {
                 System.out.println("addProjectButton clicked.");
@@ -57,7 +58,7 @@ public class MainView implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("View is now loaded!");
+        System.out.println("MainView is now loaded!");
     }
 
 }
