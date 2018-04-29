@@ -19,16 +19,20 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    compile 'org.xerial:sqlite-jdbc:3.8.11'
+    compile 'com.github.javadev:underscore:1.31'
+}
 
 jar {
     manifest {
-        attributes 'Main-Class': 'hrsystem.Main'
+        attributes 'Main-Class': 'hrsystem.App'
     }
 }
 
 jfx {
     // minimal requirement for jfxJar-task
-    mainClass = 'hrsystem.Main'
+    mainClass = 'hrsystem.App'
     
     // minimal requirement for jfxNative-task
     vendor = 'pleycpl'
