@@ -2,22 +2,66 @@ package hrsystem.models;
 
 public class Employee {
     private int id;
-    private String name;
+    private String firstName;
     private String surname;
+    private int ssn;
     private float salary;
-    private int projectId;
-    private int employeeType;
+    private EmployeeType employeeType;
 
-    public Employee(){
-        this(0,"NONE","NONE",0.0f,0,0);
+    public Employee(int id, String firstName, String surname, int ssn, float salary, EmployeeType employeeType) {
+        this.id = id;
+        this.firstName = firstName;
+        this.surname = surname;
+        this.ssn = ssn;
+        this.salary = salary;
+        this.employeeType = employeeType;
     }
 
-    public Employee(int id, String name, String surname, float salary, int projectId, int employeeType){
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.name = name;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public int getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(int ssn) {
+        this.ssn = ssn;
+    }
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(float salary) {
         this.salary = salary;
-        this.projectId = projectId;
+    }
+
+    public EmployeeType getEmployeeType() {
+        return employeeType;
+    }
+
+    public void setEmployeeType(EmployeeType employeeType) {
         this.employeeType = employeeType;
     }
 }
