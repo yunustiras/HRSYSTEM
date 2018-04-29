@@ -1,5 +1,7 @@
 package hrsystem.models;
 
+import hrsystem.models.EmployeeType;
+
 public class Employee {
     private int id;
     private String firstName;

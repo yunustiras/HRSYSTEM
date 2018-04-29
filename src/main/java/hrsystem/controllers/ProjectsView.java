@@ -1,4 +1,4 @@
-package hrsystem.modules.employee.controller;
+package hrsystem.controllers;
 
 import hrsystem.util.StageController;
 import javafx.event.ActionEvent;
@@ -12,8 +12,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EmployeesView implements Initializable {
-    private static String PreviousSceneFxmlPath = "/hrsystem/main/fxml/main.fxml";
+public class ProjectsView implements Initializable {
+
+    private static String PreviousSceneFxmlPath = "/hrsystem/fxml/index.fxml";
 
     @FXML
     private Button returnMain;
@@ -37,14 +38,13 @@ public class EmployeesView implements Initializable {
                 System.out.println("Wtf " + e.toString());
             }
         } else if (event.getSource() == searchButton) {
-            System.out.println(String.format("Will Search Employee at %s",searchText.getText()));
+            System.out.println(String.format("Will Search Project at %s",searchText.getText()));
         } else {
             System.out.println("What?");
         }
     }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("EmployeesView is now loaded!");
+        System.out.println("ProjectsView is now loaded!");
     }
 }

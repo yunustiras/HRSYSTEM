@@ -1,5 +1,8 @@
 package hrsystem.models;
 
+import hrsystem.models.Restriction;
+import hrsystem.models.Employee;
+
 import java.util.ArrayList;
 import java.util.Date;
 

@@ -10,7 +10,7 @@
         prefWidth="600.0"
         xmlns="http://javafx.com/javafx/8.0.121"
         xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="hrsystem.modules.project.controller.AddProjectView">
+        fx:controller="hrsystem.controllers.AddProject">
    <children>
       <Label layoutX="26.0" layoutY="14.0" prefHeight="16.0" prefWidth="119.0" text="Create Project" />
       <TextField fx:id="name" layoutX="165.0" layoutY="51.0" />

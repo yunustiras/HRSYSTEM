@@ -1,13 +1,10 @@
-package hrsystem.modules.login.controller;
+package hrsystem.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,8 +13,8 @@ import java.util.ResourceBundle;
 
 import hrsystem.util.StageController;
 
-public class LoginView implements Initializable {
-    public static String FxmlScenePath = "/hrsystem/main/fxml/main.fxml";
+public class Login implements Initializable {
+    public static String FxmlScenePath = "/hrsystem/fxml/index.fxml";
 
     @FXML
     private TextField textUser;
@@ -36,7 +33,7 @@ public class LoginView implements Initializable {
                 StageController.switchStage(stage, FxmlScenePath);
             }
             catch (IOException e) {
-                System.out.println("Main.fxml doesn't exists." + e.toString());
+                System.out.println("App.fxml doesn't exists." + e.toString());
             }
         }
         else{

@@ -1,4 +1,4 @@
-package hrsystem.modules.employee.controller;
+package hrsystem.controllers;
 
 import hrsystem.util.StageController;
 import javafx.event.ActionEvent;
@@ -11,17 +11,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddEmployeeView implements Initializable {
-    public static String PreviousSceneFxmlPath = "/hrsystem/employee/fxml/employees.fxml";
+public class AddProject implements Initializable {
+    public static String PreviousSceneFxmlPath = "/hrsystem/fxml/projects.fxml";
     Stage stage;
 
     @FXML
-    private TextField firstName, surname;
+    private TextField name, description;
 
     @FXML
     public void handleButtonAction(ActionEvent event){
-        stage = (Stage) firstName.getScene().getWindow();
-        System.out.println(firstName.getText() + surname.getText());
+        stage = (Stage) name.getScene().getWindow();
+        System.out.println(name.getText() + description.getText());
         try {
             StageController.switchStage(stage, PreviousSceneFxmlPath);
         } catch (IOException e) {
@@ -31,6 +31,6 @@ public class AddEmployeeView implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("AddEmployeeView is now loaded!");
+        System.out.println("AddProject is now loaded!");
     }
 }

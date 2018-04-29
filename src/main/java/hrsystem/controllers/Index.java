@@ -1,4 +1,4 @@
-package hrsystem.modules.main.controller;
+package hrsystem.controllers;
 
 import hrsystem.util.StageController;
 import javafx.event.ActionEvent;
@@ -11,11 +11,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainView implements Initializable {
-    public static String AddProjectFxmlScenePath = "/hrsystem/project/fxml/addProject.fxml";
-    public static String ListProjectFxmlScenePath = "/hrsystem/project/fxml/projects.fxml";
-    public static String AddEmployeeFxmlScenePath = "/hrsystem/employee/fxml/addEmployee.fxml";
-    public static String ListEmployeeFxmlScenePath = "/hrsystem/employee/fxml/employees.fxml";
+public class Index implements Initializable {
+    public static String AddProjectFxmlScenePath = "/hrsystem/fxml/addProject.fxml";
+    public static String ListProjectFxmlScenePath = "/hrsystem/fxml/projects.fxml";
+    public static String AddEmployeeFxmlScenePath = "/hrsystem/fxml/addEmployee.fxml";
+    public static String ListEmployeeFxmlScenePath = "/hrsystem/fxml/employees.fxml";
 
     Stage stage;
     @FXML
@@ -58,7 +58,7 @@ public class MainView implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("MainView is now loaded!");
+        System.out.println("Index is now loaded!");
     }
 
 }
