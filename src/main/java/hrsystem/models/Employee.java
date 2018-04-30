@@ -2,8 +2,6 @@ package hrsystem.models;
 
 import java.sql.Date;
 
-import hrsystem.models.EmployeeType;
-
 public class Employee {
     private int id;
     private String firstName;
@@ -28,30 +26,6 @@ public class Employee {
         this.accountingSoftwareType = accountingSoftwareType;
         this.employeeType = employeeType;
         this.salary = salary;
-    }
-
-    public Shift[] getShifts() {
-        return shifts;
-    }
-
-    public void setShifts(Shift[] shifts) {
-        this.shifts = shifts;
-    }
-
-    public TrainingInfo[] getTrainings() {
-        return trainings;
-    }
-
-    public void setTrainings(TrainingInfo[] trainings) {
-        this.trainings = trainings;
-    }
-
-    public OffDays[] getOffDays() {
-        return offDays;
-    }
-
-    public void setOffDays(OffDays[] offDays) {
-        this.offDays = offDays;
     }
 
     public int getId() {
@@ -86,18 +60,6 @@ public class Employee {
         this.ssn = ssn;
     }
 
-    public float getSalary() {
-        return salary;
-    }
-
-    public void setSalary(SalaryDetails salary) {
-        this.salary = salary;
-    }
-
-    public void setSalary(float salary) {
-        this.salary = salary;
-    }
-
     public Boolean getActive() {
         return isActive;
     }
@@ -128,5 +90,37 @@ public class Employee {
 
     public void setEmployeeType(EmployeeType employeeType) {
         this.employeeType = employeeType;
+    }
+
+    public SalaryDetails getSalary() {
+        return salary;
+    }
+
+    public void setSalary(SalaryDetails salary) {
+        this.salary = salary;
+    }
+
+    public Shift[] getShifts() {
+        return shifts;
+    }
+
+    public void setShifts(Shift[] shifts) {
+        this.shifts = shifts;
+    }
+
+    public TrainingInfo[] getTrainings() {
+        return trainings;
+    }
+
+    public void setTrainings(TrainingInfo[] trainings) {
+        this.trainings = trainings;
+    }
+
+    public OffDays[] getOffDays() {
+        return offDays;
+    }
+
+    public void setOffDays(OffDays[] offDays) {
+        this.offDays = offDays;
     }
 }
