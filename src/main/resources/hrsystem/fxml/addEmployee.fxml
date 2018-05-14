@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="454.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hrsystem.controllers.AddEmployee">
    <children>
-      <Label layoutX="26.0" layoutY="14.0" prefHeight="16.0" prefWidth="119.0" text="Create Employee" />
+      <Label layoutX="26.0" layoutY="14.0" prefHeight="16.0" prefWidth="119.0" text="Create Employee" textFill="#ee0909" />
       <TextField fx:id="firstName" layoutX="203.0" layoutY="51.0" />
       <TextField fx:id="lastName" layoutX="203.0" layoutY="84.0" />
       <Label layoutX="14.0" layoutY="56.0" text="First Name" />

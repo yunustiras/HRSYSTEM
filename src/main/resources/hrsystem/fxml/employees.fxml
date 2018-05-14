@@ -17,11 +17,12 @@
             <center>
                 <Pane prefHeight="441.0" prefWidth="730.0" BorderPane.alignment="CENTER">
                     <children>
-                        <TableView layoutY="64.0" prefHeight="376.0" prefWidth="730.0" tableMenuButtonVisible="true">
+                        <TableView fx:id="employeeTable" layoutY="64.0" prefHeight="376.0" prefWidth="730.0" tableMenuButtonVisible="true">
                             <columns>
-                                <TableColumn minWidth="2.0" prefWidth="358.0" text="Employee" />
-                                <TableColumn minWidth="0.0" prefWidth="383.0" text="Status" />
-                                <TableColumn prefWidth="104.0" text="Actions" />
+                                <TableColumn fx:id="empIdColumn" prefWidth="57.0" text="Id" />
+                                <TableColumn fx:id="empFirstNameColumn" prefWidth="75.0" text="Name" />
+                                <TableColumn fx:id="empSurnameColumn" prefWidth="73.0" text="LastName" />
+                                <TableColumn fx:id="empSsnColumn" prefWidth="73.0" text="Ssn" />
                             </columns>
                             <columnResizePolicy>
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

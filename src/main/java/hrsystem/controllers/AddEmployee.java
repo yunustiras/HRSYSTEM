@@ -1,6 +1,7 @@
 package hrsystem.controllers;
 
 import com.github.underscore.$;
+import hrsystem.dao.EmployeeDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,6 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import hrsystem.util.StageController;
@@ -29,7 +31,7 @@ public class AddEmployee implements Initializable {
     private DatePicker jobStartDate;
 
     @FXML
-    public void handleButtonAction(ActionEvent event){
+    public void handleButtonAction(ActionEvent event) throws SQLException, ClassNotFoundException{
         stage = (Stage) firstName.getScene().getWindow();
         System.out.println(
                 $.format("{},{},{},{},{},{},{},{},{}",
@@ -45,6 +47,7 @@ public class AddEmployee implements Initializable {
                 )
         );
         try {
+            EmployeeDAO.insertEmployee(firstName.getText(),lastName.getText(), Integer.parseInt(ssn.getText()));
             StageController.switchStage(stage, PreviousSceneFxmlPath);
         } catch (IOException e) {
             System.out.println("Fxml doesn't exists or " + e.toString());

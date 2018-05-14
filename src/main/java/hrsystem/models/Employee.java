@@ -3,10 +3,10 @@ package hrsystem.models;
 import java.sql.Date;
 
 public class Employee {
-    private int id;
+    private Integer id;
     private String firstName;
     private String surname;
-    private int ssn;
+    private Integer ssn;
     private Boolean isActive;
     private Date jobStartDate;
     private AccountingSoftware accountingSoftwareType;
@@ -16,7 +16,9 @@ public class Employee {
     private TrainingInfo[] trainings;
     private OffDays[] offDays;
 
-    public Employee(int id, String firstName, String surname, int ssn, Boolean isActive, Date jobStartDate, AccountingSoftware accountingSoftwareType, EmployeeType employeeType, SalaryDetails salary) {
+    public Employee() {}
+
+    public Employee(Integer id, String firstName, String surname, Integer ssn, Boolean isActive, Date jobStartDate, AccountingSoftware accountingSoftwareType, EmployeeType employeeType, SalaryDetails salary, Shift[] shifts, TrainingInfo[] trainings, OffDays[] offDays) {
         this.id = id;
         this.firstName = firstName;
         this.surname = surname;
@@ -26,13 +28,16 @@ public class Employee {
         this.accountingSoftwareType = accountingSoftwareType;
         this.employeeType = employeeType;
         this.salary = salary;
+        this.shifts = shifts;
+        this.trainings = trainings;
+        this.offDays = offDays;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -52,11 +57,11 @@ public class Employee {
         this.surname = surname;
     }
 
-    public int getSsn() {
+    public Integer getSsn() {
         return ssn;
     }
 
-    public void setSsn(int ssn) {
+    public void setSsn(Integer ssn) {
         this.ssn = ssn;
     }
 
